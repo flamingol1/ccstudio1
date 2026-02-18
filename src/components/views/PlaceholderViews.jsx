@@ -1,15 +1,5 @@
 import React from 'react';
 
-const SessionsView = () => (
-  <div className="p-6">
-    <h1 className="text-2xl font-bold mb-2">会话管理</h1>
-    <p className="text-gray-600 dark:text-gray-400 mb-6">管理与 AI 助手的对话会话</p>
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-12 text-center">
-      <p className="text-gray-500 dark:text-gray-400">会话管理功能开发中...</p>
-    </div>
-  </div>
-);
-
 const BoardsView = () => (
   <div className="p-6">
     <h1 className="text-2xl font-bold mb-2">任务看板</h1>
@@ -60,4 +50,4 @@ const SettingsView = () => (
   </div>
 );
 
-export { SessionsView, BoardsView, DocumentsView, DatabaseView, TerminalView, SettingsView };
+export { BoardsView, DocumentsView, DatabaseView, TerminalView, SettingsView };
