@@ -1,15 +1,5 @@
 import React from 'react';
 
-const BoardsView = () => (
-  <div className="p-6">
-    <h1 className="text-2xl font-bold mb-2">任务看板</h1>
-    <p className="text-gray-600 dark:text-gray-400 mb-6">可视化管理您的任务</p>
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-12 text-center">
-      <p className="text-gray-500 dark:text-gray-400">看板功能开发中...</p>
-    </div>
-  </div>
-);
-
 const DocumentsView = () => (
   <div className="p-6">
     <h1 className="text-2xl font-bold mb-2">文档中心</h1>
@@ -40,14 +30,4 @@ const TerminalView = () => (
   </div>
 );
 
-const SettingsView = () => (
-  <div className="p-6">
-    <h1 className="text-2xl font-bold mb-2">系统设置</h1>
-    <p className="text-gray-600 dark:text-gray-400 mb-6">配置应用和 AI 助手</p>
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-12 text-center">
-      <p className="text-gray-500 dark:text-gray-400">设置功能开发中...</p>
-    </div>
-  </div>
-);
-
-export { BoardsView, DocumentsView, DatabaseView, TerminalView, SettingsView };
+export { DocumentsView, DatabaseView, TerminalView };

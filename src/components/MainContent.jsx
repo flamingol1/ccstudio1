@@ -1,12 +1,10 @@
 import React from 'react';
-import { MessageSquare, Kanban, FileText, Database, Terminal, Settings, Layout } from 'lucide-react';
-import useStore from '@stores/useStore';
 import WorkspaceView from './views/WorkspaceView';
 import SessionsView from './views/SessionsView';
 import BoardsView from './views/BoardsView';
-import DocumentsView from './views/DocumentsView';
-import DatabaseView from './views/DatabaseView';
-import TerminalView from './views/TerminalView';
+import DocumentsView from './views/PlaceholderViews';
+import DatabaseView from './views/PlaceholderViews';
+import TerminalView from './views/PlaceholderViews';
 import SettingsView from './views/SettingsView';
 
 const MainContent = () => {
@@ -35,9 +33,7 @@ const MainContent = () => {
 
   return (
     <div className="flex-1 overflow-hidden bg-gray-50 dark:bg-gray-900">
-      <div className="h-full overflow-y-auto">
-        {renderView()}
-      </div>
+      <div className="h-full overflow-y-auto">{renderView()}</div>
     </div>
   );
 };
