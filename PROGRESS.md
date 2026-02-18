@@ -39,9 +39,25 @@
    - 会话列表展示
    - 创建新会话（对话框）
    - 删除会话（确认对话框）
-   - Provider 颜色标识
+   - Provider 需色标识
    - 模型选择（Claude/Gemini/Codex）
    - 消息数量和时间显示
+
+6. **看板管理功能** (`src/components/views/BoardsView.jsx`) ✨ NEW
+   - 看板列表展示
+   - 创建新看板（对话框）
+   - 看板颜色选择
+   - 删除看板
+   - 看板切换器
+   - 颜色标识
+
+7. **API 密钥设置** (`src/components/views/SettingsView.jsx`) ✨ NEW
+   - Provider 配置（Claude/Gemini/Codex）
+   - API 密钥输入
+   - 密钥显示/隐藏切换
+   - 密钥保存（使用 keytar）
+   - 安全提示信息
+   - 保存状态反馈
 
 #### 📦 新增依赖
 
@@ -61,6 +77,19 @@
    - npm audit 报告 15 个漏洞（6 中等，9 高危）
    - 建议：运行 `npm audit fix` 或手动更新依赖
 
+#### 📊 功能完成度
+
+| 模块 | 完成度 | 说明 |
+|------|--------|------|
+| 基础架构 | 100% | ✅ 完成 |
+| IPC 通信 | 100% | ✅ 完成 |
+| 数据库层 | 100% | ✅ 完成 |
+| 会话管理 | 90% | ✅ 列表/创建/删除，详情页待开发 |
+| 看板管理 | 40% | ✅ 看板管理，任务功能待开发 |
+| 文档中心 | 0% | 🚧 待开发 |
+| 终端控制 | 0% | 🚧 待开发（node-pty 问题） |
+| 系统设置 | 70% | ✅ API 密钥，其他设置待开发 |
+
 #### 📝 技术债务
 
 1. [ ] 测试覆盖
@@ -68,22 +97,30 @@
 3. [ ] 加载状态优化
 4. [ ] 类型定义（TypeScript）
 5. [ ] 国际化支持
+6. [ ] 主题切换
 
 ## 下一步计划
 
 ### 优先级 1：核心功能
-- [ ] 看板功能（Kanban）
-  - [ ] 创建看板
+- [ ] 任务管理功能
+  - [ ] 创建任务
   - [ ] 拖拽排序（dnd-kit）
-  - [ ] 任务管理
-- [ ] API 密钥设置页面
-- [ ] 文档中心（Markdown 编辑器）
+  - [ ] 任务状态更新
+  - [ ] 任务优先级
+- [ ] 会话详情页
+  - [ ] 消息展示
+  - [ ] 发送消息
+  - [ ] AI API 集成
+- [ ] 文档中心
+  - [ ] Markdown 编辑器
+  - [ ] 文档列表
+  - [ ] 实时预览
 
 ### 优先级 2：增强功能
-- [ ] 会话详情页
-- [ ] 消息发送/接收
-- [ ] AI API 集成
+- [ ] Monaco Editor 集成
 - [ ] 文件附件支持
+- [ ] 导入/导出功能
+- [ ] 快捷键支持
 
 ### 优先级 3：优化
 - [ ] 修复 node-pty 编译问题
@@ -109,11 +146,22 @@ npm audit fix
 
 ## 代码统计
 
-- 总文件：26
-- 代码行数：约 1,500+
-- 组件数：8
+- 总文件：27
+- 代码行数：约 2,000+
+- 组件数：10
 - IPC handlers：20+
 - 数据库表：5
+
+## Git 提交历史
+
+```
+f3e4f20 - Implement Kanban boards view and API keys settings page
+7e698b4 - Update README with latest features and API reference
+d7cf30c - Add development progress document
+5bbb168 - Implement IPC handlers, database layer, and sessions management
+70e507d - Add quick start guide
+cc31888 - Add migration plan document
+```
 
 ## 参考
 
