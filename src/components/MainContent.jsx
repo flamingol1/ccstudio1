@@ -1,10 +1,9 @@
 import React from 'react';
+import useStore from '@stores/useStore';
 import WorkspaceView from './views/WorkspaceView';
 import SessionsView from './views/SessionsView';
 import BoardsView from './views/BoardsView';
-import DocumentsView from './views/PlaceholderViews';
-import DatabaseView from './views/PlaceholderViews';
-import TerminalView from './views/PlaceholderViews';
+import PlaceholderViews from './views/PlaceholderViews';
 import SettingsView from './views/SettingsView';
 
 const MainContent = () => {
@@ -19,11 +18,11 @@ const MainContent = () => {
       case 'boards':
         return <BoardsView />;
       case 'documents':
-        return <DocumentsView />;
+        return <PlaceholderViews.DocumentsView />;
       case 'database':
-        return <DatabaseView />;
+        return <PlaceholderViews.DatabaseView />;
       case 'terminal':
-        return <TerminalView />;
+        return <PlaceholderViews.TerminalView />;
       case 'settings':
         return <SettingsView />;
       default:

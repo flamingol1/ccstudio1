@@ -30,4 +30,11 @@ const TerminalView = () => (
   </div>
 );
 
+const PlaceholderViews = {
+  DocumentsView,
+  DatabaseView,
+  TerminalView,
+};
+
+export default PlaceholderViews;
 export { DocumentsView, DatabaseView, TerminalView };
